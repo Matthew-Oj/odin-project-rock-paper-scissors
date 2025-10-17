@@ -1,0 +1,42 @@
+* {
+    background-color: #ffea00;
+    text-align: center;
+    font-family: 'Agency FB', sans-serif;
+}
+
+h1 {
+    font-size: 5em;
+
+}
+
+img {
+    width:200px;
+    height: 200px;
+}
+
+.user-selection img:hover {
+    box-shadow: 0 0 2px 1px black;
+}
+
+.score-board {
+    display: flex;
+    justify-content: space-center;
+    align-items: center;
+    justify-content: center;
+    column-gap: 2%;
+    padding-bottom: 6%;
+    padding-top: 25px;
+}
+
+.score-board div{
+    border-style: solid ;
+    padding: 5px;
+    box-shadow: 10px 10px black;
+    width:200px;
+    height: auto;
+}
+
+.flash-border {
+    box-shadow: 0 0 5px 2px black;
+    transition: box-shadow 0.3s ease;
+}
