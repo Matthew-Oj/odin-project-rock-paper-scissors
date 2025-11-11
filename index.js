@@ -49,12 +49,27 @@ function updateElementId(){
 
 function checkRound() {
     if (rounds === 5) {
-        let winner = humanScore > computerScore ? "YOU WIN" : "COMPUTER WINS";
+        const winner = humanScore > computerScore ? "YOU WIN" : "COMPUTER WINS";
 
-        setTimeout(() => {
-            alert(`GAME OVER: ${winner}`);
-            document.location.reload();
-        }, 500); 
+        const gameOver = document.getElementById("game-over");
+        const winnerMessage = document.getElementById("winner-message");
+        const playAgainButton = document.getElementById("play-again");
+
+        winnerMessage.textContent = `GAME OVER: ${winner}`;
+        gameOver.classList.remove("hidden");
+
+        // Disable further clicks
+        images.forEach(img => img.onclick = null);
+
+        playAgainButton.onclick = () => {
+            humanScore = 0;
+            computerScore = 0;
+            rounds = 0;
+            updateElementId();
+            document.getElementById("round-result").innerHTML = "";
+            gameOver.classList.add("hidden");
+            playGame();
+        };
     }
 }
 
