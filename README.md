@@ -1,4 +1,4 @@
-# Rock Paper Scissors (The Odin Project)
+# Rock Paper Scissors
 
 This project is part of **The Odin Project** curriculum — a fun exercise to practice **JavaScript logic** and **DOM manipulation**.
 
